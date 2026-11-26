@@ -1,0 +1,184 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;/*calculates heeght and width withhout adding padding or border eg. 100px = 100-30w*/
+}
+body{
+    background-color: #f5efe6;
+     min-height: 100vh;
+     padding: 1rem;/*1rem= 16px*/
+    display: flex;
+justify-content: center;
+align-items: center;/* its trick to make content center ant the page both align iem and justify content through row and cloumn*/
+font-family:  sans-serif;
+}
+
+.container{
+    padding: 2rem;
+    background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+ max-width: 600px;
+  width: 100%;
+  overflow: hidden;
+  position:relative/*relative on container → Makes the container the reference point.then use absolute for other to place right left top*/
+}
+.screen{
+display: none;
+padding:2rem;
+text-align: center;
+
+}
+.screen.active{
+    display: block
+}
+#start-screen h1{
+    color:#e86a33;
+    margin-bottom: 1rem;
+    font-size:2.5rem;
+}
+#start-screen p{
+    color:#666;
+    margin-bottom: 30px;
+    font-size:1rem;
+}
+#start-quiz{
+        color:#fff;
+    background-color:#e7ad96;
+    border:none;
+    border-radius:5px;
+    padding: 15px 10px;
+    cursor:pointer;
+    font-size:1.2rem;
+    transition: background-color 0.3s ease;
+}
+#start-quiz:hover{
+    background-color:#d45b28;
+}
+
+#start-quiz:hover{
+    background-color:#d45b28;
+}
+.quiz-header{
+    margin-bottom: 1rem;
+}
+
+ #question-title{
+    color:#333;
+    font-size:1.5rem;
+    margin-bottom:1rem;
+    line-height:1.5;
+}
+.quiz-info{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:10px;
+    color:#666;
+}
+.answer-container{
+    margin-bottom:1rem;
+
+   padding: 12px;
+}
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ans-button {
+    background-color: #f8f0e5;
+    color: #333;
+    border: 2px solid #eadbc8;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    font-size: 17px;
+}
+
+.ans-button:hover{
+    background-color:#eadbc8;
+    border-color:#dac0ae;
+}
+
+.ans-button.correct{
+    background-color:#a8d8a8;
+    border-color:#8bc38b;
+    color:#28a745
+}
+.ans-button.incorrect{
+    background-color:#dc4535;
+    border-color:#ffbdbd;
+    color:#750404
+}
+.srno{
+    font-weight: bold;
+     margin-right: 8px
+}
+.progress-bar{
+height:10px;
+background-color: #f8f0e5;
+border-radius:5px;
+overflow:hidden;
+margin-top :20px;
+
+}
+.progress{
+height:100%;
+width:0%;/*inially will*/
+background-color:#e86a33;
+}
+/*result screen*/
+#result-screen h1{
+    color:#e86a33;
+    margin-bottom: 1rem;
+}
+.result-info{
+    background-color:#f8f0e5;
+    border-radius:5px;
+    padding:20px;
+    margin-bottom: 30px;
+}
+.result-info p{
+color:#666;
+font-size:1.2rem;
+margin-bottom:1rem;
+}
+#result-message{
+    font-size:1.5rem;
+    font-weight:600;
+    color:#e86a33
+}
+button{
+    color:#fff;
+    background-color:#e7ad96;
+    border:none;
+    border-radius:5px;
+    padding: 15px 10px;
+    cursor:pointer;
+    font-size:1.2rem;
+    transition: background-color 0.3s ease;
+}
+button:hover{
+    background-color:#d45b28;
+}
+/*responsive design*/
+@media(max-width:500px){
+    .screen{
+        padding:1rem;
+    }
+    .start-sceeen h1{
+        font-size:2rem;
+    }
+    .question-title{
+        font-size:1.2rem;
+    }
+    .ans-button{
+        font-size:0.9rem;
+    }
+    button{
+        padding: 10px 5px;
+        font-size:1rem;
+    }
+}
