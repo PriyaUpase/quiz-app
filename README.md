@@ -1,3 +1,7 @@
+## Live Demo
+
+[Play Quiz App](https://PriyaUpase.github.io/quiz-app/)
+
 # Quiz App
 
 A simple and interactive Quiz Application built using HTML, CSS, and JavaScript.
